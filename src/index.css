@@ -1,0 +1,50 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+========================================================================== */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00FFFF;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #FFA500;
+}
+
+/* Animation for skill bars */
+@keyframes fillBar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: attr(data-percentage);
+  }
+}
+
+.skill-bar {
+  animation: fillBar 1.5s ease-out forwards;
+}
